@@ -15,7 +15,7 @@ public function getPrice() {
             return Price::get('distributor');
         }
 
-        if($customer->group == 'distributor'){
+        if($customer->group == 'general'){
             return Price::get('general');
         }
 }
