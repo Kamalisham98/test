@@ -5,20 +5,14 @@
 ```php
 # Add leading 0 number
 # ex: 5 => 0005
-private function convertNumber($number) {
-    if (strlen($number) === 1) {
-        $number = '000' + $number;
-    }
+function convertNumber($number) {
+    $number = $number + "";
+    let lenghtArr = $number.length;
+    for (let i = 1; i <= (4 - lenghtArr); i++) {
+        $number = "0" + $number;
+  }
 
-    if (strlen($number) === 2) {
-        $number = '00' + $number;
-    }
-
-    if (strlen($number) === 3) {
-        $number = '0' + $number;
-    }
-
-    return $number;
+  return $number;
 }
 
 convertNumber(5);
